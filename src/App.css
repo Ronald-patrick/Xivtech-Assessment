@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    align-items: center;
+    width: 65%;
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+}
+.mb{
+    display: none;
+}
+.info h1{
+    font-size: 85px;
+    font-weight: normal;
+    font-family: serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.info p{
+    font-size: 34px;
+    font-weight: normal;
+    font-family: serif;
+}
+.info{
+    width: 50%;
+    height: 100%;
+    padding-right: 18%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.right{
+    width: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.right img{
+    width: 100%;
+    object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info a{
+    font-family: serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+}
+
+.btn svg{
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.btn:hover svg{
+    animation-name: run;
+    animation-duration: .5s;
+}
+
+@keyframes run{
+    from{
+        color: white;
+        transform: translateX(30px);
+    }
+    to{
+        color: black;
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .info h1{
+        font-size: 40px;
+    }
+    .info p{
+        font-size: 23px;
+    }
+    .info a{
+    font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .info h1{
+        font-size: 30px;
+    }
+    .info p{
+        font-size: 20px;
+    }
+    .info a{
+    font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 647px) {
+    
+.card{
+    flex-direction: column;
+}
+.right img{
+    display: none;
+}
+
+.info h1{
+    font-size: 38px;   
+}
+
+.mb{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.box{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    width: 100%;
+    padding-right: 0px;
+}
+
+.card h1{
+    margin: 10px ;
+    margin-bottom: 30px;
+}
+.card p{
+    margin: 10px ;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+.card a{
+    margin: 10px ;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.box h2{
+    margin-left: 10px;
+}
 }
